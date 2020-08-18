@@ -1,0 +1,69 @@
+    #initalising git repo 
+git init
+
+    #adding a new remote
+git remote add origin <URL>
+
+    #making first commit on master
+echo commit1_master > commit1_master.txt
+git add commit1_master.txt
+git commit -m "initial commit"
+
+    #creating and changing to "develop" branch
+git checkout -b develop
+
+    #making first commit on "develop" branch
+echo commit1_develop > commit1_develop.txt
+git add commit1_develop.txt
+git commit -m "initial commit on develop"
+
+    #changin to master branch
+git checkout master
+
+    #making second commit to master branch
+echo commit2_master > commit2_master.txt
+git add commit2_master.txt
+git commit -m "second commit"
+
+    #changing to "develop" branch
+git checkout develop
+
+    #making second commit to "develop" branch
+echo commit2_develop > commit2_develop.txt
+git add commit2_develop.txt
+git commit -m "second commit on develop"
+
+    #changing to master branch
+git checkout master
+
+    #merging "develop" branch with master
+git merge develop
+
+    #creating and changing to "spider" branch   
+git checkout -b spider
+
+    #making first commit to "spider" branch
+echo I am working for the inductions! > spider_file1.txt
+git add spider_file1.txt
+git commit -m "initial commit on spider branch"
+
+
+    #making second commit to "spider" branch
+echo ayush shukla > spider_file2.txt
+git add spider_file2.txt
+git commit -m "second commit on spider branch"
+
+    #changing to master branch
+git checkout master
+
+    #merging spider to master branch
+git merge spider
+
+    #deleting develop and spider branch
+git branch -d develop
+git branch -d spider
+
+    #uploading local repo to remote repo
+git push origin master
+
+
